@@ -23,6 +23,8 @@
     "load-grunt-config": "0.10.0",
     "time-grunt": "*",
     "grunt-balmung": "^0.3.0",
-    "grunt-bower-task": "*"
+    "grunt-bower-task": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-htmlmin": "*"
   }
 }

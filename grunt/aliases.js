@@ -8,6 +8,10 @@ module.exports = function(grunt) {
     'default': [
       'balmung:simple'
     ],
+    'build': [
+      'copy:ico',
+      'htmlmin:compile'
+    ],
     'install': [
       'bower:install'
     ]
