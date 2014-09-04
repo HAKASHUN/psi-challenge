@@ -9,20 +9,13 @@ module.exports = function(grunt) {
       'bower:install'
     ],
     'default': [
-
+      'compile',
+      'open:local',
+      'connect:local',
+      'watch'
     ],
     /**
      * 開発時のコンパイルタスク
-     *
-     * ## html
-     *    - そのまま
-     * ## css
-     *    - stylusからpublic/css以下にcssをコンパイル
-     * ## js
-     *    - そのまま
-     * ## img
-     *    - spritesmithでスプライトシート作成
-     *    - balmungでresizeとoptimize
      */
     'compile': [
       'compile:img',
@@ -37,19 +30,10 @@ module.exports = function(grunt) {
     ],
     /**
      * デプロイするビルドタスク
-     *
-     * ## html
-     *    - 特定のcssをinline化
-     *    - htmlをminify
-     * ## css
-     *    - externalなcssをminify
-     * ## js
-     *    - concat
-     *    - minify
-     * ## img
-     *    - public/imgをコピーしてもってくる
      */
     'build': [
+      'clean:build',
+      'compile',
       'copy:html',
       'copy:ico',
       'copy:img',
@@ -58,7 +42,10 @@ module.exports = function(grunt) {
       'copy:js',
       'build:css',
       'build:js',
-      'build:html'
+      'build:html',
+      'size_report',
+      'open:build',
+      'connect:build'
     ],
     'build:html': [
       'inline',
