@@ -56,16 +56,17 @@ module.exports = function(grunt) {
       'copy:css',
       'copy:lib',
       'copy:js',
+      'build:css',
       'build:js',
-      'build:html',
-      'build:css'
+      'build:html'
     ],
     'build:html': [
       'inline',
       'htmlmin:build'
     ],
     'build:css': [
-
+      'csscomb',
+      'csso'
     ],
     'build:js': [
       'useminPrepare',
