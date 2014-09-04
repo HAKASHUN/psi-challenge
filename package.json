@@ -1,0 +1,23 @@
+{
+  "name": "sh-web",
+  "version": "0.0.0",
+  "description": "Preparation for TOTEC 2014",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HAKASHUN/totec2014.git"
+  },
+  "author": "HAKASHUN",
+  "bugs": {
+    "url": "https://github.com/HAKASHUN/totec2014/issues"
+  },
+  "homepage": "https://github.com/HAKASHUN/totec2014",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "load-grunt-config": "0.10.0",
+    "time-grunt": "*"
+  }
+}
