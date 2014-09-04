@@ -15,6 +15,18 @@ module.exports = function(grunt) {
       'watch'
     ],
     /**
+     * 計測タスク
+     * - size_report ファイル容量
+     * - plato js品質管理
+     * - psi-ngrok pagespeed計測
+     */
+    'report': [
+      'connect:build',
+      'size_report',
+      'plato',
+      'psi-ngrok'
+    ],
+    /**
      * 開発時のコンパイルタスク
      */
     'compile': [
@@ -42,10 +54,7 @@ module.exports = function(grunt) {
       'copy:js',
       'build:css',
       'build:js',
-      'build:html',
-      'size_report',
-      'open:build',
-      'connect:build'
+      'build:html'
     ],
     'build:html': [
       'inline',

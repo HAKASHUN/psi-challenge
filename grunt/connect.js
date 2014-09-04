@@ -16,8 +16,7 @@ module.exports = function(grunt) {
       options: {
         livereload: true,
         base: 'build/public',
-        port: 3000,
-        keepalive: true
+        port: 3000
       }
     }
   };

@@ -33,11 +33,14 @@
     "grunt-csso": "*",
     "grunt-csscomb": "*",
     "grunt-open": "*",
+    "grunt-plato": "*",
     "grunt-usemin": "*",
     "grunt-inline": "^0.3.2",
+    "grunt-pagespeed": "*",
     "grunt-spritesmith": "1.18.0",
     "grunt-size-report": "*",
     "load-grunt-config": "0.10.0",
-    "time-grunt": "*"
+    "time-grunt": "*",
+    "ngrok": "*"
   }
 }
