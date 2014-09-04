@@ -1,0 +1,475 @@
+//--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--
+// _css3.styl
+//--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--
+
+// CSS3
+//
+// ベンダープレフィックス付けるものなど。
+//
+// Styleguide 1.1
+
+
+// box-sizing
+//
+// ボックスサイズの算出方法を指定する
+// http://www.htmq.com/css3/box-sizing.shtml
+//
+// ブラウザ対応状況
+// http://caniuse.com/css3-boxsizing
+//
+// ```
+// box-sizing(arg)
+// ```
+//
+// $arg : content-box(default), border-box, inherit
+//
+// Styleguide 1.1.1
+
+box-sizing()
+  -webkit-box-sizing arguments
+  box-sizing arguments
+
+
+// Display
+//
+// 主に古いFlexibleBox対応用。
+// lib/_flex.stylで汎用クラス(.ag-flex)を作っているので、なるべくそれを使って欲しいんだぜ？
+//
+// ブラウザ対応状況
+// http://caniuse.com/#feat=flexbox
+//
+// ```
+// display(arg)
+// ```
+//
+// $arg : 値がboxである場合は`-webkit-box`になります
+//
+// Styleguide 1.1.2
+
+display(arg)
+  if arg is 'box'
+    display -webkit-box
+  else
+    display arguments
+
+// box-align
+//
+// ボックス内の子要素の縦方向の揃え位置を指定する
+// http://www.htmq.com/css3/box-align.shtml
+//
+// ブラウザ対応状況
+// http://caniuse.com/#feat=flexbox
+//
+// ```
+// box-align(arg)
+// ```
+//
+// $arg : start, end, center, baseline, stretch(default)
+//
+// Styleguide 1.1.3
+
+box-align()
+  -webkit-box-align arguments
+  box-align arguments
+
+// box-pack
+//
+// ボックス内の子要素の横方向の揃え位置を指定する
+// http://www.htmq.com/css3/box-pack.shtml
+//
+// ブラウザ対応状況
+// http://caniuse.com/#feat=flexbox
+//
+// ```
+// box-pack(arg)
+// ```
+//
+// $arg : start(default), end, center, justify
+//
+// Styleguide 1.1.4
+
+box-pack()
+  -webkit-box-pack arguments
+  box-pack arguments
+
+// box-orient
+//
+// ボックス内の子要素の配置方向を指定する
+// http://www.htmq.com/css3/box-orient.shtml
+//
+// ブラウザ対応状況
+// http://caniuse.com/#feat=flexbox
+//
+// ```
+// box-orient(arg)
+// ```
+//
+// $arg : horizontal, vertical, inline-axis(default), block-axis, inherit
+//
+// Styleguide 1.1.5
+
+box-orient()
+  -webkit-box-orient arguments
+  box-orient arguments
+
+// box-flex
+//
+// 伸縮ボックスの伸縮比率を指定する
+// http://www.htmq.com/css3/box-flex.shtml
+//
+// ブラウザ対応状況
+// http://caniuse.com/#feat=flexbox
+//
+// ```
+// box-flex(arg)
+// ```
+//
+// $arg : 要素が伸縮する比率を正の数値で指定する（初期値は0.0）
+//
+// Styleguide 1.1.6
+
+box-flex()
+  -webkit-box-flex arguments
+  box-flex arguments
+
+// transform
+//
+// 要素に2D変形、または、3D変形を適用する
+// http://www.htmq.com/css3/transform.shtml
+//
+// ブラウザ対応状況
+// http://caniuse.com/#feat=transforms2d
+//
+// ```
+// transform(arg)
+// ```
+//
+// $arg : none(default), transform関数
+//
+// Styleguide 1.1.7
+
+transform()
+  -webkit-transform arguments
+  transform arguments
+
+
+// transform-origin
+//
+// 2D変形、または、3D変形の原点を指定する
+// http://www.htmq.com/css3/transform-origin.shtml
+//
+// ブラウザ対応状況
+// http://caniuse.com/#feat=transforms2d
+//
+// ```
+// transform-origin(arg)
+// ```
+//
+// $arg : パーセンテージ, 長さ, キーワード
+//
+// Styleguide 1.1.7
+
+transform-origin()
+  -webkit-transform-origin arguments
+  transform-origin arguments
+
+
+// transition
+//
+// transition効果（時間的変化）をまとめて指定する
+// http://www.htmq.com/css3/transition.shtml
+//
+// ブラウザ対応状況
+// http://caniuse.com/#feat=css-transitions
+//
+// ```
+// transition(arg)
+// ```
+//
+// $arg : 各プロパティの値をスペースで区切って指定
+//
+// Styleguide 1.1.8
+
+transition()
+  -webkit-transition arguments
+  transition arguments
+
+
+// animation
+//
+// アニメーションについてまとめて指定する
+// http://www.htmq.com/css3/animation.shtml
+//
+// ブラウザ対応状況
+// http://caniuse.com/#feat=css-animation
+//
+// ```
+// animation(arg)
+// ```
+//
+// $arg : 各プロパティの値をスペースで区切って指定(name, duration, timing-function, delay, iteration-count, direction)
+//
+// Styleguide 1.1.9
+
+animation()
+  -webkit-animation arguments
+  animation arguments
+
+
+// animation-name
+//
+// アニメーション名を指定する
+// http://www.htmq.com/css3/animation-name.shtml
+//
+// ブラウザ対応状況
+// http://caniuse.com/#feat=css-animation
+//
+// ```
+// animation-name(arg)
+// ```
+//
+// $arg : none(default) アニメーション名
+//
+// Styleguide 1.1.10
+
+animation-name()
+  -webkit-animation-name arguments
+  animation-name arguments
+
+
+// animation-duration
+//
+// アニメーション一回分の時間の長さを指定する
+// http://www.htmq.com/css3/animation-duration.shtml
+//
+// ブラウザ対応状況
+// http://caniuse.com/#feat=css-animation
+//
+// ```
+// animation-duration(arg)
+// ```
+//
+// $arg : 0(default) 時間を指定する（例：5.5秒なら5.5s）
+//
+// Styleguide 1.1.11
+
+animation-duration()
+  -webkit-animation-duration arguments
+  animation-duration arguments
+
+
+// animation-timing-function
+//
+// アニメーションのタイミング・進行割合を指定する
+// http://www.htmq.com/css3/animation-timing-function.shtml
+//
+// ブラウザ対応状況
+// http://caniuse.com/#feat=css-animation
+//
+// ```
+// animation-timing-function(arg)
+// ```
+//
+// $arg : ease(default) キーワード, cubic-bezier関数
+//
+// Styleguide 1.1.12
+
+animation-timing-function()
+  -webkit-animation-timing-function arguments
+  animation-timing-function arguments
+
+
+// animation-iteration-count
+//
+// アニメーションの繰り返し回数を指定する
+// http://www.htmq.com/css3/animation-iteration-count.shtml
+//
+// ブラウザ対応状況
+// http://caniuse.com/#feat=css-animation
+//
+// ```
+// animation-iteration-count(arg)
+// ```
+//
+// $arg : 1(default), infinite(無限), 数値
+//
+// Styleguide 1.1.13
+
+animation-iteration-count()
+  -webkit-animation-iteration-count arguments
+  animation-iteration-count arguments
+
+
+// tap-highlight-color
+//
+// タップしたときのハイライト表示を指定する
+//
+// Androidには問題があるので承知の上での使用を推奨
+// http://blog.webcreativepark.net/2011/06/09-201210.html
+//
+// ```
+// tap-highlight-color(arg)
+// ```
+//
+// $arg : 初期値は端末により異なる。rgbaで指定する
+//
+// Styleguide 1.1.14
+
+tap-highlight-color()
+  -webkit-tap-highlight-color arguments
+  tap-highlight-color arguments
+
+
+// touch-callout
+//
+// 長タップした時に表示される吹き出し表示を無効にする。（画像なら画像を保存するとか）
+// http://css-infos.net/property/-webkit-touch-callout
+//
+// Androidは動作しない場合が多い。
+//
+// ```
+// touch-callout(arg)
+// ```
+//
+// $arg : default, none, inherit
+//
+// Styleguide 1.1.15
+
+touch-callout()
+  -webkit-touch-callout arguments
+  touch-callout arguments
+
+
+// user-select
+//
+// 選択操作を無効にする。
+// https://developer.mozilla.org/ja/docs/Web/CSS/user-select
+//
+// 仕様から外れているため、ブラウザの対応には差がある。
+// 今対応していてもバージョンアップでなくなる可能性が高いのでなるべく使わない方がいいでしょう。
+//
+// ```
+// user-select(arg)
+// ```
+//
+// $arg : none, text, all, element
+//
+// Styleguide 1.1.16
+
+user-select()
+  -webkit-user-select arguments
+  user-select arguments
+
+
+// appearance
+//
+// プラットフォームにおける標準的なUIの外観にする
+// http://www.htmq.com/css3/appearance.shtml
+//
+// buttonをradioにすることもできるが、もっぱらnoneで初期化する為に使われるプロパティです。
+//
+// ```
+// appearance(arg)
+// ```
+//
+// $arg : none ほか キーワード
+//
+// Styleguide 1.1.17
+
+appearance()
+  -webkit-appearance arguments
+  appearance arguments
+
+
+// linear-gradient-background
+//
+// 新旧仕様に対応させたbackground-image: linear-gradientを出力する
+//
+// Ultimate CSS Gradient GeneratorのSCSSで、background-imageに渡しているものに`-background`を付ければおk。
+// http://www.colorzilla.com/gradient-editor/
+//
+// ```
+// linear-gradient-background(top, #63604a 0%,#a6a389 50%,#63604a 100%)
+// ```
+//
+// Styleguide 1.1.18
+linear-gradient-background(start, stops...)
+  background-image unquote('-webkit-gradient(linear, '+ convert-gradient-orientation(start, 'webkit') + ',' + normalize-stops(stops) + ')')
+  background-image unquote('-webkit-linear-gradient(' + start + ',' + join(',', stops) + ')')
+  background-image unquote('linear-gradient(' + convert-gradient-orientation(start, 'original') + ',' + join(',', stops) + ')')
+
+
+// linear-gradient-border-image
+//
+// 新旧仕様に対応させたborder-image: linear-gradientを出力する
+//
+// Ultimate CSS Gradient GeneratorのSCSSで、background-imageに渡しているものに`-border-image`を付ける。
+// 第二引数にborder-imageのsource以外の指定を追加する。
+// http://www.colorzilla.com/gradient-editor/
+//
+// ```
+// linear-gradient-border-image(top, 5 round, #63604a 0%,#a6a389 50%,#63604a 100%)
+// ```
+//
+// Styleguide 1.1.18.1
+linear-gradient-border-image(start, opt, stops...)
+  -webkit-border-image unquote('-webkit-gradient(linear, '+ convert-gradient-orientation(start, 'webkit') + ',' + normalize-stops(stops) + ')') opt
+  -webkit-border-image unquote('-webkit-linear-gradient(' + start + ',' + join(',', stops) + ')') opt
+  border-image unquote('linear-gradient(' + convert-gradient-orientation(start, 'original') + ',' + join(',', stops) + ')') opt
+
+/*
+ * Normalize color stops:
+ *
+ *   - (color pos) -> (pos color)
+ *   - (color) -> (implied-pos color)
+ *
+ * nibから拝借
+ */
+
+normalize-stops(stops)
+  str = clone(stops)
+  for stop, i in stops
+    if length(stop) == 1
+      color = stop[0]
+      str[i] = ('color-stop(' + pos-in-stops(i, stops) + ',' + color + ')')
+    else if typeof(stop[1]) == 'unit'
+      str[i] = ('color-stop(' + stop[1] + ',' + stop[0] + ')')
+  join(',', str)
+
+
+/*
+ * Implicit color stop position.
+ *
+ * nibから拝借
+ */
+
+pos-in-stops(i, stops)
+  len = length(stops)
+  if len - 1 == i
+    100%
+  else if i
+    unit(i / len * 100, '%')
+  else
+    0
+
+/**
+ * グラデーションのstart指定を変換する
+ * 必要になったら追加で。
+ */
+
+convert-gradient-orientation(start, type = null)
+
+  if type == 'webkit'
+    if start == 'top' or 'to bottom'
+      'left top, left bottom'
+    else
+      start
+
+  else if type == 'original'
+    if start == 'top'
+      'to bottom'
+    else
+      start
+
+  else
+    start

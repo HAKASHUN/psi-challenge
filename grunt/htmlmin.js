@@ -6,7 +6,7 @@ var config = require('../lib/config');
  * grunt-contrib-copy
  */
 module.exports = {
-  compile: {
+  build: {
     options: {
       removeComments: true,
       collapseWhitespace: true
@@ -14,7 +14,7 @@ module.exports = {
     files: [
       {
         expand: true,
-        cwd: 'public/',
+        cwd: config.dist + '/public',
         src: ['**/*.html'],
         dest: config.dist + '/public'
       }

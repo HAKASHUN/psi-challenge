@@ -45,5 +45,15 @@ module.exports = {
         cwd: 'public/js/'
       }
     ]
+  },
+  css: {
+    files: [
+      {
+        expand: true,
+        src: '**/*',
+        dest: config.dist + '/public/css/',
+        cwd: 'public/css/'
+      }
+    ]
   }
 };

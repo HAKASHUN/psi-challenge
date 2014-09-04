@@ -1,0 +1,95 @@
+/*
+General
+
+雑多なもろもろ
+
+Styleguide 1.5
+*/
+
+/*
+ Clearfix
+
+Compassのミックスイン移植。:after疑似要素を追加する
+
+```
+@include legacy-pie-clearfix()
+```
+
+Styleguide 1.5.1
+*/
+      
+legacy-pie-clearfix() 
+  &:after {
+    content "\0020"
+    display block
+    height 0
+    clear both
+    overflow hidden
+    visibility hidden
+  }
+
+
+/*
+ Click style base
+
+ 背景色をアルファ黒30%にする
+
+```
+@include ag-click-active-base-style()
+```
+
+Styleguide 1.5.2
+*/
+
+ag-click-active-base-style()
+  background rgba(0,0,0,0.3)
+
+
+/*
+ag-click-active
+
+&.ag-click_active のスタイルを追加する.
+
+
+```
+@include ag-click-active()
+```
+
+Styleguide 1.5.3
+*/
+
+ag-click-active()
+  &.ag-click_active
+     ag-click-active-base-style()
+
+
+/*
+ag-click-active-pseudo
+
+&.ag-click_active の:after疑似要素スタイルを追加する.
+
+
+```
+@include ag-click-active-pseudo($position = relative, $radius = null)
+```
+
+Styleguide 1.5.4
+*/
+ag-click-active-pseudo($position = relative, $radius = null)
+  if $position == relative
+    &.ag-click_active
+      position relative
+
+  &.ag-click_active::after
+    content ""
+    display block
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    z-index 0
+    ag-click-active-base-style()
+    
+    if $radius
+      border-radius $radius

@@ -1,0 +1,444 @@
+/*
+Sprite
+
+  スプライト画像の関数を元に、以下のプロパティを書き出す
+
+  * background-image
+  * background-position
+  * background-size
+  * width
+  * height
+
+
+  * `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+  * `$repeat` -- background-repeat
+
+
+  ```
+  sprite(osl-sp-icon-power())
+  ```
+
+Styleguide 1.2
+*/
+
+sprite($sprite, $repeat = null) {
+
+  if $repeat {
+    background-repeat $repeat
+  }
+
+  spriteBgImage($sprite)
+  spriteBgPosition($sprite)
+  spriteBgSize($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}
+
+/*
+Sprite Background
+
+  スプライト画像の関数を元に、以下のプロパティを書き出す
+
+  * background-image
+  * background-position
+  * background-size
+
+
+  * `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+  * `$repeat` -- background-repeat
+
+
+  ```
+  spriteBg(osl-sp-icon-power())
+  ```
+
+Styleguide 1.2.1
+*/
+spriteBg($sprite, $repeat = null) {
+
+  if $repeat {
+    background-repeat $repeat
+  }
+
+  spriteBgImage($sprite)
+  spriteBgPosition($sprite)
+  spriteBgSize($sprite)
+}
+
+/*
+Sprite Width
+
+スプライト画像の関数を元に、widthプロパティを書き出す
+
+* `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+* `$zoom` -- 倍率
+
+```
+spriteWidth($sprite, $dpr = $osl-global-devicePixelRatio)
+spriteWidth(osl-sp-icon-power())
+```
+
+Styleguide 1.2.2
+*/
+spriteWidth($sprite, $zoom = 1) {
+  width floor($sprite[4] * $zoom)
+}
+
+/*
+Sprite Width Value
+
+スプライト画像の関数を元に、widthプロパティを書き出す
+
+* `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+* `$zoom` -- 倍率
+
+```
+spriteWidth($sprite, $dpr = $osl-global-devicePixelRatio)
+spriteWidth(osl-sp-icon-power())
+```
+
+Styleguide 1.2.2.1
+*/
+spriteWidthValue($sprite, $zoom = 1) {
+  floor($sprite[4] * $zoom)
+}
+
+/*
+Sprite Height
+
+スプライト画像の関数を元に、heightプロパティを書き出す
+
+* `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+* `$zoom` -- 倍率
+
+
+```
+spriteHeight($sprite, $dpr = $osl-global-devicePixelRatio)
+spriteHeight(osl-sp-icon-power())
+```
+
+Styleguide 1.2.3
+*/
+spriteHeight($sprite, $zoom = 1) {
+  height floor($sprite[5] * $zoom)
+}
+
+/*
+Sprite Height Value
+
+スプライト画像の関数を元に、heightの値を返す
+
+* `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+* `$zoom` -- 倍率
+
+
+```
+spriteHeightValue($sprite, $dpr = $osl-global-devicePixelRatio)
+spriteHeightValue(osl-sp-icon-power())
+```
+
+Styleguide 1.2.3.1
+*/
+spriteHeightValue($sprite, $zoom = 1) {
+  floor($sprite[5] * $zoom)
+}
+
+
+/*
+Sprite Size
+
+スプライト画像の関数を元に、width heightをhashで返す
+
+* `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+* `$zoom` -- 倍率
+
+```
+spriteSize($sprite, $dpr = $osl-global-devicePixelRatio)
+spriteSize(osl-sp-icon-power())
+```
+
+Styleguide 1.2.4
+*/
+spriteSize($sprite, $zoom = 1) {
+ floor($sprite[6] * $zoom) floor($sprite[7] * $zoom)
+}
+
+/*
+Sprite background-size
+
+スプライト画像の関数を元に、background-sizeプロパティを書き出す
+
+* `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+* `$zoom` -- 倍率
+
+```
+spriteBgSize($sprite, $dpr = $osl-global-devicePixelRatio)
+spriteBgSize(osl-sp-icon-power())
+```
+
+Styleguide 1.2.5
+*/
+spriteBgSize($sprite, $zoom = 1) {
+  background-size floor($sprite[6] * $zoom) floor($sprite[7] * $zoom)
+}
+
+/*
+Sprite Position
+
+スプライト画像の関数を元に、画像の位置をhashで返す
+
+* `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+* `$zoom` -- 倍率
+
+```
+spritePosition($sprite, $dpr = $osl-global-devicePixelRatio)
+spritePosition(osl-sp-icon-power())
+```
+
+Styleguide 1.2.6
+*/
+spritePosition($sprite, $zoom = 1) {
+  floor($sprite[2] * $zoom) floor($sprite[3] * $zoom)
+}
+
+/*
+Sprite background-position
+
+スプライト画像の関数を元に、background-positionを書き出す
+
+* `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+* `$zoom` -- 倍率
+
+```
+spriteBgPosition($sprite, $dpr = $osl-global-devicePixelRatio)
+spriteBgPosition(osl-sp-icon-power())
+```
+
+Styleguide 1.2.7
+*/
+spriteBgPosition($sprite, $zoom = 1) {
+  background-position floor($sprite[2] * $zoom) floor($sprite[3] * $zoom)
+}
+
+/*
+Sprite offset-x
+
+スプライト画像の関数を元に、画像のX位置を返す
+
+* `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+* `$zoom` -- 倍率
+
+```
+spritePositionX($sprite, $dpr = $osl-global-devicePixelRatio)
+spritePositionX(osl-sp-icon-power())
+```
+
+Styleguide 1.2.8
+*/
+spritePositionX($sprite, $zoom = 1) {
+  return floor($sprite[2] * $zoom)
+}
+
+
+/*
+Sprite offset-y
+
+スプライト画像の関数を元に、画像のY位置を返す
+
+* `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+* `$zoom` -- 倍率
+
+```
+spritePositionY($sprite, $dpr = $osl-global-devicePixelRatio)
+spritePositionY(osl-sp-icon-power())
+```
+
+Styleguide 1.2.9
+*/
+spritePositionY($sprite, $zoom = 1) {
+  return floor($sprite[3] * $zoom)
+}
+
+/*
+Sprite offset-y
+
+スプライト画像の関数を元に、画像のY位置を返す
+
+* `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+* `$zoom` -- 倍率
+
+```
+spritePositionY($sprite, $dpr = $osl-global-devicePixelRatio)
+spritePositionY(osl-sp-icon-power())
+```
+
+Styleguide 1.2.9
+*/
+spritePositionY($sprite, $zoom = 1) {
+  return floor($sprite[3] * $zoom)
+}
+
+/*
+Sprite image
+
+スプライト画像の関数を元に、画像のパスを返す
+
+* `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+
+```
+spriteImage($sprite)
+spriteImage(osl-sp-icon-power())
+```
+
+Styleguide 1.2.10
+*/
+spriteImage($sprite) {
+  $sprite[8]
+}
+
+/*
+Sprite background-image
+
+スプライト画像の関数を元に、background-imageプロパティを書き出す
+
+* `$sprite` -- sprite以下のstylファイルに書き出されたfunction。modifierついてないやつ
+
+```
+spriteBgImage($sprite)
+spriteBgImage(osl-sp-icon-power())
+```
+
+Styleguide 1.2.11
+*/
+spriteBgImage($sprite) {
+  background-image url($sprite[8])
+}
+
+
+/*
+content-image-size
+
+パスを渡した画像のサイズをhashで返す。渡すパスはpublic以下のimg〜拡張子前まででおk。
+
+* `$img` -- 画像のパス
+* `$ext` -- 拡張子
+* `$dpr` -- devicePixelRatioの値（1〜3）
+
+```
+content-image-size($img, $ext = 'png', $dpr = $osl-global-devicePixelRatio)
+content-image-size('img/ui/box/type-2-bg')
+```
+
+Styleguide 1.3.1
+*/
+content-image-size($img, $ext = 'png', $dpr = $osl-global-devicePixelRatio) {
+  $width = content-image-width($img, $ext, $dpr)
+  $height = content-image-height($img, $ext, $dpr)
+
+  return $width $height
+}
+
+/*
+content-image-width
+
+パスを渡した画像のwidthを返す。渡すパスはpublic以下のimg〜拡張子前まででおk。
+
+* `$img` -- 画像のパス
+* `$ext` -- 拡張子
+* `$dpr` -- devicePixelRatioの値（1〜3）
+
+```
+content-image-width($img, $ext = 'png', $dpr = $osl-global-devicePixelRatio)
+content-image-width('img/ui/box/type-2-bg')
+```
+
+Styleguide 1.3.2
+*/
+
+content-image-width($img, $ext = 'png', $dpr = $osl-global-devicePixelRatio) {
+  $width = image-size(CONTENT_IMG_PATH + $img + '_' + $osl-global-devicePixelRatio-fix + '.' + $ext)[0]
+  
+  return floor(operate('/', $width, $dpr))
+}
+
+/*
+content-image-height
+
+パスを渡した画像のheightを返す。渡すパスはpublic以下のimg〜拡張子前まででおk。
+
+* `$img` -- 画像のパス
+* `$ext` -- 拡張子
+* `$dpr` -- devicePixelRatioの値（1〜3）
+
+```
+content-image-height($img, $ext = 'png', $dpr = $osl-global-devicePixelRatio)
+content-image-height('img/ui/box/type-2-bg')
+```
+
+Styleguide 1.3.3
+*/
+
+content-image-height($img, $ext = 'png', $dpr = $osl-global-devicePixelRatio) {
+  $height = image-size(CONTENT_IMG_PATH + $img + '_' + $osl-global-devicePixelRatio-fix + '.' + $ext)[1]
+  
+  return floor(operate('/', $height, $dpr))
+}
+
+/*
+width-height-from-image
+
+パスを渡した画像のサイズを取得してwidth、heightプロパティを書き出す。渡すパスはpublic以下のimg〜拡張子前まででおk。
+
+* `$img` -- 画像のパス
+* `$ext` -- 拡張子
+* `$dpr` -- devicePixelRatioの値（1〜3）
+
+```
+width-height-from-image($img, $ext = 'png', $dpr = $osl-global-devicePixelRatio)
+width-height-from-image('img/ui/box/type-2-bg')
+```
+
+Styleguide 1.3.4
+*/
+width-height-from-image($img, $ext = 'png', $dpr = $osl-global-devicePixelRatio) {
+  width content-image-width($img, $ext, $dpr)
+  height content-image-height($img, $ext, $dpr)
+}
+
+/*
+image-path
+
+public以下のimg〜拡張子前までのパスを渡すと環境に合ったパスに整形する。
+
+* `$img` -- 画像のパス
+* `$ext` -- 拡張子
+
+```
+image-path($img, $ext = 'png')
+image-path('img/ui/box/type-2-bg')
+```
+
+Styleguide 1.3.5
+*/
+image-path($img, $ext = 'png') {
+  IMG_URL + $img + '_' + $osl-global-devicePixelRatio-fix + '.' + $ext
+}
+
+/*
+bg-size-from-image
+
+パスを渡した画像のサイズを取得してbackground-sizeを書き出す。渡すパスはpublic以下のimg〜拡張子前まででおk。
+
+* `$img` -- 画像のパス
+* `$ext` -- 拡張子
+
+```
+bg-size-from-image($img, $ext = 'png')
+image-path('img/ui/box/type-2-bg')
+```
+
+Styleguide 1.3.6
+*/
+bg-size-from-image($img, $ext = 'png') {
+  background-size content-image-size($img, $ext)
+}
