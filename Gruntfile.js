@@ -8,10 +8,11 @@ module.exports = function(grunt) {
   // load grunt config
   require('load-grunt-config')(grunt);
 
+
   // Register customer task for ngrok
   grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function() {
     var done = this.async();
-    var port = 3000;
+    var port = 4000;
 
     ngrok.connect(port, function(err, url) {
       if (err !== null) {

@@ -7,18 +7,16 @@ var config = require('../lib/config');
  */
 module.exports = {
   sample: {
-    'src': [
-      'sprite_files/sample/*.png'
-    ],
+    'src': ['sprite_files/sample/**/*.png'],
     'destImg': 'img/sprite/sample.png',
-    'destCSS': 'styl/sprite/_sample.styl',
-    'algorithm': 'diagonal',
-    'padding': 3,
+    'imgPath': '/img/sprite/sample',
+    'padding': 10,
+    'cssTemplate': 'styl/sprite.template.mustache',
     'cssVarMap': function (sprite) {
-      sprite.name = 'sh-sp-' + sprite.name;
+      sprite.image = sprite.image.replace(".png", "");
     },
-    'cssOpts': {
-      'functions': false
-    }
+    'algorithm': 'binary-tree',
+    'destCSS': 'styl/sprite/_sample.styl',
+    'engine': 'auto'
   }
 };

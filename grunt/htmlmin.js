@@ -3,7 +3,7 @@
 var config = require('../lib/config');
 
 /**
- * grunt-contrib-copy
+ * grunt-contrib-htmlmin
  */
 module.exports = {
   build: {

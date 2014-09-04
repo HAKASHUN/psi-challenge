@@ -8,9 +8,9 @@ var config = require('../lib/config');
 module.exports = {
   dist: {
     options:{
-      cssmin: true
+      cssmin: false
     },
-    src: [config.dest + '/public/index.html'],
+    src: [config.dest + '/public/**/*.html'],
     dest: [config.dest + '/public/']
   }
 };

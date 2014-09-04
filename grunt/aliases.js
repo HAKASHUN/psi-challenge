@@ -24,9 +24,10 @@ module.exports = function(grunt) {
      * - psi-ngrok pagespeed計測
      */
     'report': [
-      'connect:build',
+      'connect:report',
       'size_report',
       'plato',
+      'open:plato',
       'psi-ngrok'
     ],
     /**
@@ -57,7 +58,9 @@ module.exports = function(grunt) {
       'copy:js',
       'build:css',
       'build:js',
-      'build:html'
+      'build:html',
+      'open:build',
+      'connect:build'
     ],
     'build:html': [
       'inline',

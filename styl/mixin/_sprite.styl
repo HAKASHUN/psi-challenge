@@ -32,6 +32,22 @@ sprite($sprite, $repeat = null) {
   spriteBgSize($sprite)
   spriteWidth($sprite)
   spriteHeight($sprite)
+
+  @media only all and (-webkit-min-device-pixel-ratio: 2) {
+    spriteBgImage($sprite, 2)
+    spriteBgPosition($sprite, 2)
+    spriteBgSize($sprite, 2)
+    spriteWidth($sprite, 2)
+    spriteHeight($sprite, 2)
+  }
+
+  @media only all and (-webkit-min-device-pixel-ratio: 1.5) {
+    spriteBgImage($sprite, 1.5)
+    spriteBgPosition($sprite, 1.5)
+    spriteBgSize($sprite, 1.5)
+    spriteWidth($sprite, 1.5)
+    spriteHeight($sprite, 1.5)
+  }
 }
 
 /*
@@ -63,6 +79,18 @@ spriteBg($sprite, $repeat = null) {
   spriteBgImage($sprite)
   spriteBgPosition($sprite)
   spriteBgSize($sprite)
+
+  @media only all and (-webkit-min-device-pixel-ratio: 2) {
+    spriteBgImage($sprite, 2)
+    spriteBgPosition($sprite, 2)
+    spriteBgSize($sprite, 2)
+  }
+
+  @media only all and (-webkit-min-device-pixel-ratio: 1.5) {
+    spriteBgImage($sprite, 1.5)
+    spriteBgPosition($sprite, 1.5)
+    spriteBgSize($sprite, 1.5)
+  }
 }
 
 /*
@@ -310,8 +338,8 @@ spriteBgImage(osl-sp-icon-power())
 
 Styleguide 1.2.11
 */
-spriteBgImage($sprite) {
-  background-image url($sprite[8])
+spriteBgImage($sprite, $zoom = 1) {
+  background-image url($sprite[8] +'_'+ $zoom * 10 + '.png')
 }
 
 
@@ -357,7 +385,7 @@ Styleguide 1.3.2
 
 content-image-width($img, $ext = 'png', $dpr = $osl-global-devicePixelRatio) {
   $width = image-size(CONTENT_IMG_PATH + $img + '_' + $osl-global-devicePixelRatio-fix + '.' + $ext)[0]
-  
+
   return floor(operate('/', $width, $dpr))
 }
 
@@ -380,7 +408,7 @@ Styleguide 1.3.3
 
 content-image-height($img, $ext = 'png', $dpr = $osl-global-devicePixelRatio) {
   $height = image-size(CONTENT_IMG_PATH + $img + '_' + $osl-global-devicePixelRatio-fix + '.' + $ext)[1]
-  
+
   return floor(operate('/', $height, $dpr))
 }
 

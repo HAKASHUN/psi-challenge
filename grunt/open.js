@@ -9,5 +9,8 @@ module.exports = {
   },
   build: {
     path: 'http://localhost:3000'
+  },
+  plato: {
+    path: 'reports/index.html'
   }
 };

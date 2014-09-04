@@ -1,0 +1,60 @@
+{
+// Default options
+'functions': true
+}
+
+{{#items}}
+    //${{name}}
+
+    {{name}}_x(){
+    return round({{px.x}} / 3)
+    }
+
+    {{name}}_y(){
+    return round({{px.y}} / 3)
+    }
+
+    {{name}}_offset_x(){
+    return round({{px.offset_x}} / 3)
+    }
+
+    {{name}}_offset_y(){
+    return round({{px.offset_y}} / 3)
+    }
+
+    {{name}}_width(){
+    return round({{px.width}} / 3)
+    }
+
+    {{name}}_height(){
+    return round({{px.height}} / 3)
+    }
+
+    {{name}}_total_width(){
+    return round({{px.total_width}} / 3)
+    }
+
+    {{name}}_total_height(){
+    return round({{px.total_height}} / 3)
+    }
+
+    {{name}}_image(){
+
+    return '{{{escaped_image}}}'
+    }
+
+    {{name}}(){
+    $x = {{name}}_x()
+    $y = {{name}}_y()
+    $offset_x = {{name}}_offset_x()
+    $offset_y = {{name}}_offset_y()
+    $width = {{name}}_width()
+    $height = {{name}}_height()
+    $total_width = {{name}}_total_width()
+    $total_height = {{name}}_total_height()
+    $image = {{name}}_image()
+
+    return $x $y $offset_x $offset_y $width $height $total_width $total_height $image
+    }
+{{/items}}
+

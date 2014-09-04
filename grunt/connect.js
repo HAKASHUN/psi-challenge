@@ -1,5 +1,7 @@
 'use strict';
 
+var config = require('../lib/config');
+
 /**
  * grunt-contrib-connect
  */
@@ -9,14 +11,22 @@ module.exports = function(grunt) {
       options: {
         livereload: true,
         base: 'public',
-        port: 2000
+        port: config.port.local
       }
     },
     build: {
       options: {
         livereload: true,
         base: 'build/public',
-        port: 3000
+        port: config.port.build,
+        keepalive: true
+      }
+    },
+    report: {
+      options: {
+        livereload: true,
+        base: 'build/public',
+        port: config.port.report
       }
     }
   };

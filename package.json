@@ -35,7 +35,7 @@
     "grunt-open": "*",
     "grunt-plato": "*",
     "grunt-usemin": "*",
-    "grunt-inline": "^0.3.2",
+    "grunt-inline": "HAKASHUN/grunt-inline",
     "grunt-pagespeed": "*",
     "grunt-spritesmith": "1.18.0",
     "grunt-size-report": "*",
