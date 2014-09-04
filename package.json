@@ -26,6 +26,8 @@
     "grunt-contrib-htmlmin": "*",
     "grunt-contrib-stylus": "*",
     "grunt-contrib-uglify": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-usemin": "*",
     "grunt-inline": "^0.3.2",
     "grunt-spritesmith": "1.18.0",
     "load-grunt-config": "0.10.0",

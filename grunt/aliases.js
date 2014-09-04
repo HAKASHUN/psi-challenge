@@ -52,13 +52,15 @@ module.exports = function(grunt) {
      *
      */
     'build': [
+      'copy:html',
       'copy:ico',
       'copy:img',
       'copy:css',
       'copy:lib',
       'copy:js',
+      'build:js',
       'build:html',
-      'build:js'
+      'build:css'
     ],
     'build:html': [
       'inline',
@@ -68,7 +70,10 @@ module.exports = function(grunt) {
 
     ],
     'build:js': [
-      'uglify'
+      'useminPrepare',
+      'concat',
+      'uglify',
+      'usemin'
     ]
   }
 };

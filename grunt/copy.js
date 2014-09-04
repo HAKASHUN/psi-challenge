@@ -6,6 +6,16 @@ var config = require('../lib/config');
  * grunt-contrib-copy
  */
 module.exports = {
+  html: {
+    files: [
+      {
+        expand: true,
+        src: '**/*.html',
+        dest: config.dist + '/public',
+        cwd: 'public'
+      }
+    ]
+  },
   ico: {
     files: [
       {
