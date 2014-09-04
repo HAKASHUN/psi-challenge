@@ -9,14 +9,14 @@ module.exports = {
   css:{
     files: {
       list: [
-        config.dist + '/public/css/**/*.css'
+        config.dest + '/public/css/**/*.css'
       ]
     }
   },
   js:{
     files: {
       list: [
-        config.dist + '/public/js/*.min.js',
+        config.dest + '/public/js/*.min.js',
       ]
     }
   }

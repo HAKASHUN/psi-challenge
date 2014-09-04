@@ -9,6 +9,9 @@ module.exports = function(grunt) {
       'bower:install'
     ],
     'default': [
+      'server',
+    ],
+    'server': [
       'compile',
       'open:local',
       'connect:local',

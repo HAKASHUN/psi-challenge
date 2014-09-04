@@ -14,9 +14,9 @@ module.exports = {
     files: [
       {
         expand: true,
-        cwd: config.dist + '/public',
+        cwd: config.dest + '/public',
         src: ['**/*.html'],
-        dest: config.dist + '/public'
+        dest: config.dest + '/public'
       }
     ]
   }

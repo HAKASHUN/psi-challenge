@@ -11,7 +11,7 @@ module.exports = {
       {
         expand: true,
         src: '**/*.html',
-        dest: config.dist + '/public',
+        dest: config.dest + '/public',
         cwd: 'public'
       }
     ]
@@ -21,7 +21,7 @@ module.exports = {
       {
         expand: true,
         src: '**/*',
-        dest: config.dist + '/public/ico',
+        dest: config.dest + '/public/ico',
         cwd: 'public/ico'
       }
     ]
@@ -31,7 +31,7 @@ module.exports = {
       {
         expand: true,
         src: '**/*',
-        dest: config.dist + '/public/img',
+        dest: config.dest + '/public/img',
         cwd: 'public/img'
       }
     ]
@@ -41,7 +41,7 @@ module.exports = {
       {
         expand: true,
         src: '**/*',
-        dest: config.dist + '/public/lib/',
+        dest: config.dest + '/public/lib/',
         cwd: 'public/lib/'
       }
     ]
@@ -51,7 +51,7 @@ module.exports = {
       {
         expand: true,
         src: '**/*',
-        dest: config.dist + '/public/js/',
+        dest: config.dest + '/public/js/',
         cwd: 'public/js/'
       }
     ]
@@ -61,7 +61,7 @@ module.exports = {
       {
         expand: true,
         src: '**/*',
-        dest: config.dist + '/public/css/',
+        dest: config.dest + '/public/css/',
         cwd: 'public/css/'
       }
     ]

@@ -21,14 +21,14 @@ module.exports = {
       {
         expand: true,
         src: '**/*.js',
-        dest:  config.dist + '/public/js',
-        cwd:  config.dist + '/public/js'
+        dest:  config.dest + '/public/js',
+        cwd:  config.dest + '/public/js'
       },
       {
         expand: true,
         src: '**/*.js',
-        dest:  config.dist + '/public/lib',
-        cwd:  config.dist + '/public/lib'
+        dest:  config.dest + '/public/lib',
+        cwd:  config.dest + '/public/lib'
       }
     ]
   }

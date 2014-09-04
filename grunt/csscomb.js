@@ -7,7 +7,7 @@ var config = require('../lib/config');
  */
 module.exports = function(grunt) {
   var files = (function() {
-    var path = config.dist + '/public/css/**/*.css';
+    var path = config.dest + '/public/css/**/*.css';
     var sources = grunt.file.expandMapping(path);
     return sources;
   })();

@@ -10,7 +10,7 @@ module.exports = {
     options:{
       cssmin: true
     },
-    src: [config.dist + '/public/index.html'],
-    dest: [config.dist + '/public/']
+    src: [config.dest + '/public/index.html'],
+    dest: [config.dest + '/public/']
   }
 };

@@ -8,7 +8,7 @@ var config = require('../lib/config');
 module.exports = {
   options: {
     root: "public",
-    dest: config.dist + "/public"
+    dest: config.dest + "/public"
   },
-  html: [config.dist + "/public/**/*.html"]
+  html: [config.dest + "/public/**/*.html"]
 };
