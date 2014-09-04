@@ -10,7 +10,7 @@ module.exports = {
     'src': [
       'sprite_files/sample/*.png'
     ],
-    'destImg': 'public/img/sprite/sample.png',
+    'destImg': 'img/sprite/sample.png',
     'destCSS': 'styl/sprite/_sample.styl',
     'algorithm': 'diagonal',
     'padding': 3,

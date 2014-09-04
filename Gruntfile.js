@@ -4,5 +4,4 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
   // load grunt config
   require('load-grunt-config')(grunt);
-
 };

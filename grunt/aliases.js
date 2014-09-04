@@ -9,8 +9,8 @@ module.exports = function(grunt) {
       'bower:install'
     ],
     'default': [
-    ],
 
+    ],
     /**
      * 開発時のコンパイルタスク
      *
@@ -23,19 +23,18 @@ module.exports = function(grunt) {
      * ## img
      *    - spritesmithでスプライトシート作成
      *    - balmungでresizeとoptimize
-     *
      */
     'compile': [
       'compile:img',
       'compile:css'
     ],
     'compile:img': [
+      'sprite',
       'balmung:simple'
     ],
     'compile:css': [
       'stylus:compile'
     ],
-
     /**
      * デプロイするビルドタスク
      *
@@ -49,7 +48,6 @@ module.exports = function(grunt) {
      *    - minify
      * ## img
      *    - public/imgをコピーしてもってくる
-     *
      */
     'build': [
       'copy:html',
