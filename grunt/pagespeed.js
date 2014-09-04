@@ -7,6 +7,7 @@ var config = require('../lib/config');
  */
 module.exports = {
   options: {
+    paths: ['/', '/about.html'],
     nokey: true,
     locale: "ja_JP",
     threshold: 70
