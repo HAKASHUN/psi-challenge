@@ -25,6 +25,7 @@
     "grunt-balmung": "^0.3.0",
     "grunt-bower-task": "*",
     "grunt-contrib-copy": "*",
-    "grunt-contrib-htmlmin": "*"
+    "grunt-contrib-htmlmin": "*",
+    "grunt-contrib-uglify": "*"
   }
 }

@@ -10,7 +10,11 @@ module.exports = function(grunt) {
     ],
     'build': [
       'copy:ico',
-      'htmlmin:compile'
+      'copy:img',
+      'copy:lib',
+      'copy:js',
+      'htmlmin:compile',
+      'uglify'
     ],
     'install': [
       'bower:install'
