@@ -15,9 +15,13 @@
     "url": "https://github.com/HAKASHUN/totec2014/issues"
   },
   "homepage": "https://github.com/HAKASHUN/totec2014",
+  "dependencies": {
+    "lodash": "^2.4.1"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "load-grunt-config": "0.10.0",
-    "time-grunt": "*"
+    "time-grunt": "*",
+    "grunt-balmung": "^0.3.0"
   }
 }
